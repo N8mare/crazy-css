@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  --card-height: 305px;
+}
+
+body {
+  padding: 12px 20px 20px;
+}
+
+.header,
+.footer {
+  img {
+    height: 300px;
+    width: auto;
+  }
+}
+
+.card-container {
+  border: 1px dotted red;
+  padding: 20px 12px;
+  position: relative;
+  .card {
+    height: var(--card-height);
+    .card-inner {
+      padding: 12px;
+      border: 1px dashed blueviolet;
+      margin-top: 12px;
+      background-color: aquamarine;
+      height: var(--card-height);
+      will-change: transform;
+      transform-origin: top;
+      img {
+        max-width: 250px;
+        float: left;
+        margin-right: 8px;
+      }
+      h3 {
+        margin-top: 0;
+      }
+    }
+    .card-inner.fixed {
+      position: fixed;
+      margin-right: 40px;
+    }
+    .card-inner.abs {
+      position: absolute;
+      margin-right: unset;
+    }
+  }
+}
